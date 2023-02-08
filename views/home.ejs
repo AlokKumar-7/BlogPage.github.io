@@ -1,0 +1,16 @@
+<%-include('partials/header');-%>
+    <h1>Alok's Blog</h1>
+    <h4>
+        <%= startingContent%>
+    </h4>
+    <% post.forEach(compose => {%>
+        <h2>
+            <%= compose.title %>
+        </h2>
+        <p>
+            <%= compose.body.substring(1,100)+"..." %>
+
+                <a type="submit" href="http://localhost:3000/post/<%=compose.title%>">Read More</a>
+        </p>
+        <% }) %>
+            <%-include('partials/footer');-%>
